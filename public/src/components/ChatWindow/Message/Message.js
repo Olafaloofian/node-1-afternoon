@@ -30,17 +30,22 @@ export default class Message extends Component {
   }
 
   render() {
-    const { id, text, time, edit, remove } = this.props;
+    const { id, text, time, edit, remove, username } = this.props;
     const { editting } = this.state;
     console.log( id, text );
     return (
       <div className="Message__container">
         <span className="Message__time">{time}</span>
+        <span className="Message__text"> {username} </span>
         {
           editting
           ?
+          <div>
+            
             <input className="Message__input" value={ this.state.text } onChange={ this.handleChange } onKeyPress={ this.edit } />
+          </div>
           :
+            
             <span className="Message__text">{text}</span>
         }
         <span className="Message__edit" onClick={ () => this.setState({ editting: !this.state.editting, text }) }> <FaPencil /> </span>

@@ -19,6 +19,15 @@
   border-radius: 3px;
 }
 
+#UserName {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 9%;
+  margin-top: 5px;
+  width: 30%;
+}
+
 #ChatWindow__messagesChildContainer {
   padding: 15px;
   padding-bottom: 0px;
